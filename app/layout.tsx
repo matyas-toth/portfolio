@@ -28,7 +28,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={cn("antialiased", fontMono.variable, instrumentSerif.variable, "font-sans", instrumentSans.variable)}
+      className={cn("antialiased dark", fontMono.variable, instrumentSerif.variable, "font-sans", instrumentSans.variable)}
     >
       <body className="bg-black relative">
         <GradualBlur
