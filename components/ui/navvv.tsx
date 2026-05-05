@@ -6,14 +6,7 @@ export default function AppNavBar() {
                     <span className="text-5xl font-instrument-serif tracking-tight select-none cursor-pointer">Matyas Toth</span>
 
                 </div>
-                <div className="flex justify-end items-center gap-10">
-                    <span className="text-xl tracking-tight opacity-80 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer select-none">Selected Work</span>
-                    <span className="text-xl tracking-tight opacity-80 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer select-none">What I Do</span>
-                    <span className="text-xl tracking-tight opacity-80 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer select-none">Blog</span>
-                    <span className="text-xl tracking-tight opacity-80 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer select-none">Experience</span>
-                    <span className="text-xl tracking-tight opacity-80 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer select-none">Philosophy</span>
-                    <span className="text-xl tracking-tight opacity-80 hover:opacity-100 transition-all duration-300 ease-out cursor-pointer select-none">Contact</span>
-                </div>
+
             </div>
         </nav>
     )
