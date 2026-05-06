@@ -36,14 +36,14 @@ export function GlowCard({ children, className, innerClassName, ...props }: HTML
     >
       {/* Border glow */}
       <div
-        className="pointer-events-none absolute inset-0 opacity-0 group-hover/glowgrid:opacity-100 transition-opacity duration-500 rounded-[inherit]"
+        className="pointer-events-none absolute inset-0 opacity-0 group-hover/glowgrid:opacity-100 transition-opacity duration-500 rounded-3xl"
         style={{
           background: "radial-gradient(400px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.5), transparent 40%)"
         }}
       />
 
       {/* Inner card background */}
-      <div className={cn("absolute inset-[2px] rounded-[calc(1.5rem-2px)] bg-olive-900 z-10", innerClassName)}></div>
+      <div className={cn("absolute inset-[2px] rounded-[calc(1.9rem)] bg-olive-900 z-10", innerClassName)}></div>
 
       {/* Content wrapper */}
       <div className="relative z-20 h-full w-full">
@@ -52,7 +52,7 @@ export function GlowCard({ children, className, innerClassName, ...props }: HTML
 
       {/* Hover background glow */}
       <div
-        className="pointer-events-none absolute inset-[2px] rounded-[calc(1.5rem-2px)] z-30 opacity-0 group-hover/glow:opacity-100 transition-opacity duration-500"
+        className="pointer-events-none absolute inset-[2px] rounded-[calc(1.5rem-2px)] z-30 opacity-0 group-hover/glow:opacity-0 transition-opacity duration-500"
         style={{
           background: "radial-gradient(600px circle at var(--mouse-x) var(--mouse-y), rgba(255,255,255,0.06), transparent 40%)"
         }}

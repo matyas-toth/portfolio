@@ -2,6 +2,8 @@ import GradualBlur from "@/components/GradualBlur"
 import { Button } from "@/components/ui/button"
 import { GlowGrid, GlowCard } from "@/components/ui/glow-card"
 import { Dialog, DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog"
+import { BlogSection } from "@/components/blog-section"
+import { ContactSection } from "@/components/contact-section"
 
 import frame from "../public/frame.png"
 import Image from "next/image"
@@ -10,7 +12,7 @@ import two from "../public/two.jpg"
 import three from "../public/three.jpg"
 import four from "../public/four.jpg"
 import { HugeiconsIcon } from "@hugeicons/react"
-import { BedSingle01Icon, ClipboardIcon, ExternalLink, LinkSquare01Icon, AiMagicIcon, CodeIcon, AiBrowserIcon, BinaryCodeIcon, CursorMagicSelection01Icon, BoundingBoxIcon, Building01Icon } from "@hugeicons/core-free-icons"
+import { BedSingle01Icon, ClipboardIcon, ExternalLink, LinkSquare01Icon, AiMagicIcon, CodeIcon, AiBrowserIcon, BinaryCodeIcon, CursorMagicSelection01Icon, BoundingBoxIcon, Building01Icon, UserGroupIcon } from "@hugeicons/core-free-icons"
 
 
 
@@ -165,9 +167,9 @@ export default function Page() {
 
           <Dialog>
             <DialogTrigger asChild>
-              <GlowCard className="w-full col-span-2 h-70 p-8 flex flex-col justify-between items-start cursor-pointer duration-500">
+              <GlowCard className="w-full col-span-2 h-fit p-8 flex flex-col justify-between items-start cursor-pointer duration-500">
                 <div>
-                  <HugeiconsIcon icon={Building01Icon} className="w-12 h-12 text-olive-400 mb-6" />
+                  <HugeiconsIcon icon={UserGroupIcon} className="w-12 h-12 text-olive-400 mb-6" />
                   <h3 className="font-instrument-serif text-4xl text-olive-300">Civic tech projects</h3>
                   <p className="text-olive-500 font-medium text-lg mt-2">Developing technology for public good and community empowerment.</p>
                 </div>
@@ -196,6 +198,17 @@ export default function Page() {
           </Dialog>
         </GlowGrid>
 
+      </div>
+
+      {/* ─── Blog ─────────────────────────────────────────── */}
+      <div className="relative w-full">
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-transparent to-transparent pointer-events-none" />
+        <BlogSection />
+      </div>
+
+      {/* ─── Contact ──────────────────────────────────────── */}
+      <div className="relative w-full border-t border-olive-900/60">
+        <ContactSection />
       </div>
 
 
