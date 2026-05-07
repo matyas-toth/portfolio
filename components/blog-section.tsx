@@ -136,7 +136,7 @@ const posts: BlogPost[] = [
         </p>
         <blockquote className="border-l-2 border-olive-500 pl-6 my-8 text-olive-300 italic text-xl">
           "The best abstraction is the one you don't have to think about.
-           The worst is the one you have to fight."
+          The worst is the one you have to fight."
         </blockquote>
         <h3 className="font-instrument-serif text-3xl text-olive-200 mt-10">
           What I Actually Recommend
@@ -344,15 +344,13 @@ export function BlogSection() {
       {/* Section header */}
       <div className="flex items-end justify-between mb-16">
         <div>
-          <p className="text-olive-600 text-sm font-mono uppercase tracking-[0.3em] mb-4">
-            — Selected Writing
-          </p>
+
           <h2 className="text-7xl text-olive-300 tracking-tight font-instrument-serif">
-            From the <span className="italic">notebook.</span>
+            What I'm <span className="italic">thinking about.</span>
           </h2>
         </div>
-        <p className="text-olive-500 text-lg font-medium max-w-xs text-right">
-          Long-form thoughts on design, engineering, and the space between.
+        <p className="text-olive-500 text-lg font-medium max-w-md text-right">
+          Long-form thoughts on design, engineering, AI, and the space between.
         </p>
       </div>
 

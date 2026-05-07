@@ -9,6 +9,7 @@ import {
   GithubIcon,
   ArrowRight01Icon,
   CheckmarkCircle01Icon,
+  TwitterIcon,
 } from "@hugeicons/core-free-icons";
 import { cn } from "@/lib/utils";
 
@@ -147,21 +148,21 @@ function FloatTextarea({
 const socialLinks = [
   {
     label: "LinkedIn",
-    handle: "matyas-toth",
+    handle: "Mátyás Tóth",
     icon: Linkedin01Icon,
-    href: "https://linkedin.com/in/matyas-toth",
+    href: "https://www.linkedin.com/in/mátyás-tóth-56920926b/",
   },
   {
     label: "GitHub",
-    handle: "@matyastoth",
+    handle: "@matyas-toth",
     icon: GithubIcon,
-    href: "https://github.com/matyastoth",
+    href: "https://github.com/matyas-toth",
   },
   {
-    label: "Email",
-    handle: "hi@matyastoth.com",
-    icon: Mail01Icon,
-    href: "mailto:hi@matyastoth.com",
+    label: "Twitter",
+    handle: "@madebyreig",
+    icon: TwitterIcon,
+    href: "https://x.com/madebyreig",
   },
 ];
 
@@ -185,9 +186,7 @@ export function ContactSection() {
   return (
     <section className="container z-50 mx-auto py-30 pb-40">
       {/* Section label */}
-      <p className="text-olive-600 text-sm font-mono uppercase tracking-[0.3em] mb-4">
-        — Get in touch
-      </p>
+
 
       {/* Big heading with typewriter */}
       <h2 className="text-7xl text-olive-400 tracking-tight font-instrument-serif mb-20 leading-tight">
@@ -202,7 +201,7 @@ export function ContactSection() {
         <div className="col-span-2 space-y-10">
           <p className="text-olive-500 text-lg font-medium leading-relaxed">
             Whether you have a project in mind, a problem to solve, or just want
-            to talk about design and technology — my inbox is open.
+            to talk about stuff, my inbox is open.
           </p>
 
           <div className="space-y-1">
@@ -231,100 +230,12 @@ export function ContactSection() {
             ))}
           </div>
 
-          {/* Availability badge */}
-          <div className="flex items-center gap-3 py-3 px-4 bg-olive-900 border border-olive-800 rounded-2xl w-fit">
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-            </span>
-            <span className="text-sm text-olive-400 font-medium">
-              Available for new projects
-            </span>
-          </div>
+
         </div>
 
-        {/* Right — form */}
-        <div className="col-span-3">
-          {sent ? (
-            <div className="flex flex-col items-center justify-center text-center py-20 space-y-4">
-              <div className="w-16 h-16 rounded-full bg-olive-800 flex items-center justify-center mb-4">
-                <HugeiconsIcon
-                  icon={CheckmarkCircle01Icon}
-                  className="w-8 h-8 text-olive-300"
-                />
-              </div>
-              <h3 className="font-instrument-serif text-4xl text-olive-200">
-                Message sent.
-              </h3>
-              <p className="text-olive-500 text-lg">
-                I&apos;ll get back to you within a day or two.
-              </p>
-              <Button
-                variant="outline"
-                className="mt-6 border-olive-700 text-olive-400 hover:text-olive-200 hover:border-olive-500"
-                onClick={() => {
-                  setSent(false);
-                  setName("");
-                  setEmail("");
-                  setMessage("");
-                }}
-              >
-                Send another
-              </Button>
-            </div>
-          ) : (
-            <form onSubmit={handleSubmit} className="space-y-5">
-              <div className="grid grid-cols-2 gap-5">
-                <FloatInput
-                  label="Your name"
-                  id="contact-name"
-                  value={name}
-                  onChange={setName}
-                />
-                <FloatInput
-                  label="Email address"
-                  id="contact-email"
-                  type="email"
-                  value={email}
-                  onChange={setEmail}
-                />
-              </div>
-              <FloatTextarea
-                label="What's on your mind?"
-                id="contact-message"
-                value={message}
-                onChange={setMessage}
-              />
-              <div className="flex items-center justify-between pt-2">
-                <p className="text-olive-600 text-sm">
-                  No spam. Just conversations.
-                </p>
-                <Button
-                  type="submit"
-                  size="xl"
-                  disabled={sending || !name || !email || !message}
-                  className={cn(
-                    "text-xl transition-all duration-300",
-                    sending && "opacity-70 cursor-wait"
-                  )}
-                >
-                  {sending ? (
-                    <span className="flex items-center gap-2">
-                      <span className="animate-spin w-4 h-4 border-2 border-olive-400/40 border-t-olive-300 rounded-full" />
-                      Sending...
-                    </span>
-                  ) : (
-                    <span className="flex items-center gap-2">
-                      Send message
-                      <HugeiconsIcon icon={ArrowRight01Icon} className="w-5 h-5" />
-                    </span>
-                  )}
-                </Button>
-              </div>
-            </form>
-          )}
-        </div>
+
       </div>
+      <div className="text-4xl font-instrument-serif tracking-tight text-olive-600 mt-10">© {new Date().getFullYear()} Matyas Toth. All rights reserved.</div>
     </section>
   );
 }

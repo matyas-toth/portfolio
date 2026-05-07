@@ -207,7 +207,7 @@ export default function Page() {
       </div>
 
       {/* ─── Contact ──────────────────────────────────────── */}
-      <div className="relative w-full border-t border-olive-900/60">
+      <div className="relative w-full border-olive-900/60">
         <ContactSection />
       </div>
 
