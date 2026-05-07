@@ -1,0 +1,69 @@
+export const meta = {
+  title: "The GPU War Nobody Is Talking About",
+  subtitle:
+    "China is about to do to AI hardware what it did to electric vehicles. The economics of building with AI are about to change forever.",
+  excerpt:
+    "We are potentially months away from Chinese chipmakers releasing competitive alternatives to NVIDIA's best training and inference GPUs. If that happens, the cost of building AI products drops to a fraction of what it is today. And almost nobody in the Western tech ecosystem is paying attention.",
+  date: "2026-05-07",
+  readTime: "7 min",
+  tag: "AI & Hardware",
+  slug: "the-gpu-war-nobody-is-talking-about",
+};
+
+There is a pattern that keeps repeating in global technology markets: a category gets dominated by a small number of Western or allied companies, prices stay high, supply stays constrained, and then China enters the market and turns the economics upside down.
+
+It happened with solar panels. It happened with batteries. It happened with electric vehicles. And it is about to happen with GPUs for AI training and inference.
+
+## The Current State of Things
+
+Right now, NVIDIA has something close to a monopoly on the hardware that powers modern AI. The H100, the B200, the GB300. If you want to train a frontier model or run inference at scale, you are writing checks to NVIDIA. Big checks. The kind of checks that make AI development a game only well-funded companies and nation-states can play.
+
+This constraint shapes everything downstream. It shapes which startups get built, which products get shipped, which research gets done. When compute is expensive, only the most commercially obvious applications of AI get funded. The weird, experimental, potentially transformative stuff gets shelved because nobody can justify the GPU bill.
+
+## What China Is Building
+
+Huawei's Ascend series. Biren's BR100 and BR200. Moore Threads. Enflame. These are not research projects or press releases. These are shipping silicon, improving rapidly, and backed by a government that has made semiconductor independence a top national priority.
+
+The Ascend 910C is already being used for large-scale training runs inside China. Is it as good as an H100? Not quite. Not yet. But the trajectory is steep, and the gap is closing faster than most Western analysts expected. The sanctions were supposed to slow this down. Instead, they appear to have accelerated it by removing any remaining hesitation about building domestic alternatives.
+
+## The EV Playbook
+
+Here is why I think this matters more than most people realize: look at what happened with electric vehicles.
+
+Five years ago, the consensus was that Chinese EVs were cheap, low-quality, and irrelevant to Western markets. Then BYD started shipping cars that were genuinely competitive with Tesla on range, features, and build quality, at 40-60% of the price. European automakers went from dismissive to existential-crisis mode in about 18 months.
+
+The same playbook applies to GPUs. Chinese chipmakers do not need to match NVIDIA feature-for-feature. They need to be good enough for the majority of use cases at a dramatically lower price. And "good enough" in AI hardware keeps getting easier to hit, because software frameworks like PyTorch and JAX abstract away more and more of the hardware-specific optimization.
+
+## What Happens to AI Costs
+
+If Chinese GPUs reach 80% of NVIDIA performance at 30% of the cost, the entire economics of AI development changes. Not gradually. Suddenly.
+
+Inference costs, which are already the primary bottleneck for deploying AI at scale, would collapse. The API pricing that currently makes many AI-native products barely viable would become a rounding error. Training runs that currently cost millions would cost hundreds of thousands. The barrier to entry for building competitive AI products would drop by an order of magnitude.
+
+This is not speculation. This is what happens in every hardware market that China enters at scale. The only question is timing.
+
+## Why Nobody Is Talking About It
+
+There are a few reasons this is not getting more attention in Western tech circles.
+
+First, the sanctions narrative. The prevailing story is that export controls on advanced chip-making equipment have successfully contained China's AI hardware ambitions. This narrative is comforting and mostly wrong. The controls have created friction, not a wall.
+
+Second, NVIDIA's dominance feels permanent in the same way Intel's did in 2015. Dominant market positions in hardware always feel permanent until they are not.
+
+Third, there is a motivated reasoning problem. A huge amount of venture capital is deployed on the assumption that compute will remain expensive. AI infrastructure companies, cloud providers, and the entire "picks and shovels" thesis depends on GPU scarcity. The people with the biggest platforms have the least incentive to talk about what happens when scarcity ends.
+
+## What This Means If You Build Things
+
+If you are building AI-native products today, you should be designing for a world where compute costs are 5-10x lower than they are now within the next two to three years. Not because of algorithmic efficiency gains (though those help), but because the hardware market is about to get competitive in a way it has not been for a decade.
+
+This changes what is viable. Applications that are currently too expensive to run at scale become possible. Real-time video processing, continuous agent loops, personalized models running per-user. The stuff that today requires you to raise a Series B just to cover your GPU bill becomes something a two-person team can afford.
+
+The teams that will benefit most are the ones building products where the core value proposition is not "we have access to compute" but "we understand a problem deeply and AI makes our solution dramatically better." When compute is abundant, domain expertise becomes the scarce resource. That is a much more interesting game to play.
+
+## The Uncomfortable Truth
+
+The uncomfortable truth is that the current AI ecosystem is built on artificial scarcity. Not intentional artificial scarcity, but the structural kind that comes from one company controlling the critical supply chain. When that scarcity ends, a lot of the current market structure stops making sense.
+
+Some companies that are worth billions today because they efficiently allocate scarce GPU resources will lose their moats overnight. Some research agendas that are constrained by compute budgets will suddenly become tractable. And some founders who are currently priced out of the AI market will find that the door just opened.
+
+I posted about this on Twitter in March. I still stand by it. If anything, I think the timeline has accelerated. Check back in a month.

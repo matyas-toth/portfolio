@@ -184,21 +184,21 @@ export function ContactSection() {
   };
 
   return (
-    <section className="container z-50 mx-auto py-30 pb-40">
+    <section className="container z-50 mx-auto py-16 md:py-30 pb-24 md:pb-40">
       {/* Section label */}
 
 
       {/* Big heading with typewriter */}
-      <h2 className="text-7xl text-olive-400 tracking-tight font-instrument-serif mb-20 leading-tight">
+      <h2 className="text-3xl sm:text-5xl lg:text-7xl text-olive-400 tracking-tight font-instrument-serif mb-6 md:mb-20 leading-tight">
         Let&apos;s make something{" "}
         <TypewriterCycle
           words={["remarkable.", "unexpected.", "together.", "that matters.", "extraordinary."]}
         />
       </h2>
 
-      <div className="grid grid-cols-5 gap-16 items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 md:gap-16 items-start">
         {/* Left — social + info */}
-        <div className="col-span-2 space-y-10">
+        <div className="col-span-1 md:col-span-1 lg:col-span-2 space-y-10">
           <p className="text-olive-500 text-lg font-medium leading-relaxed">
             Whether you have a project in mind, a problem to solve, or just want
             to talk about stuff, my inbox is open.
@@ -235,7 +235,7 @@ export function ContactSection() {
 
 
       </div>
-      <div className="text-4xl font-instrument-serif tracking-tight text-olive-600 mt-10">© {new Date().getFullYear()} Matyas Toth. All rights reserved.</div>
+      <div className="text-2xl sm:text-4xl font-instrument-serif tracking-tight text-olive-600 mt-10">© {new Date().getFullYear()} Matyas Toth. All rights reserved.</div>
     </section>
   );
 }

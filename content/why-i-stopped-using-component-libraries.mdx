@@ -1,0 +1,33 @@
+export const meta = {
+  title: "Why I Stopped Using Component Libraries",
+  subtitle:
+    "And what I learned from building everything from scratch (twice).",
+  excerpt:
+    "I've built the same modal component four times in my career. Each time I learned something different. Here's what the fourth iteration taught me about design systems, abstraction, and when to reach for the framework.",
+  date: "2026-03-28",
+  readTime: "9 min",
+  tag: "Engineering",
+  slug: "why-i-stopped-using-component-libraries",
+};
+
+The first time I built a modal from scratch, I was 22 and working on a startup with zero design system. It took me three days. It had bugs. The z-index was wrong. Focus trapping was nonexistent. It was, by every objective measure, bad software.
+
+## The Allure of the Library
+
+For several years after that, I reached for component libraries reflexively. MUI, Ant Design, Chakra. Whatever the team had chosen, whatever was in the boilerplate. The productivity gains were real. You could move fast. Accessibility was (mostly) handled. The design language was (mostly) consistent.
+
+The problems were subtler. Every time a design required something slightly off-spec — a non-standard animation, a layout that didn't fit the grid assumptions, a component composition that the library authors hadn't anticipated — you were fighting the library instead of building the product. The abstraction started leaking.
+
+> "The best abstraction is the one you don't have to think about. The worst is the one you have to fight."
+
+## What I Actually Recommend
+
+Use headless component libraries (Radix, Headless UI) for behavior and accessibility primitives. Build your own visual layer on top. This gives you the hard parts for free — focus management, ARIA attributes, keyboard navigation — while leaving the visual expression completely in your control.
+
+Shadcn/ui got this right. It's not a library you install — it's a collection of components you own. You read the source, you understand it, you modify it. That's the relationship you should have with every component in your system.
+
+## The Fourth Modal
+
+The fourth time I built a modal — last year, for this portfolio — I did it in about two hours. Not because I'm faster than I was, but because I finally understood what the component actually needed to do versus what I had been trying to make it do. Most of the complexity I was managing in earlier versions was complexity I had introduced by overconstrained design decisions.
+
+Simplicity is a skill. It takes a long time to learn.
