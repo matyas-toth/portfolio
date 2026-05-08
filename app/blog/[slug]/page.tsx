@@ -36,11 +36,13 @@ export async function generateMetadata({
       type: "article",
       publishedTime: new Date(post.date).toISOString(),
       authors: ["Matyas Toth"],
+      images: [{ url: "/og-image.png" }],
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      images: ["/og-image.png"],
     },
   };
 }

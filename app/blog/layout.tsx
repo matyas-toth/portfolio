@@ -13,6 +13,14 @@ export const metadata: Metadata = {
       "Long-form thoughts on design, engineering, civic tech, and the space between.",
     url: "https://maty.as/blog",
     type: "website",
+    images: [{ url: "/og-image.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Matyas Toth",
+    description:
+      "Long-form thoughts on design, engineering, civic tech, and the space between.",
+    images: ["/og-image.png"],
   },
 };
 

@@ -29,6 +29,13 @@ export const metadata: Metadata = {
     description: "Never idle, always curious. Explore selected work in product design, AI, and civic tech.",
     url: "https://maty.as",
     type: "website",
+    images: [{ url: "/og-image.png" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Matyas Toth — Designer, Engineer, Builder",
+    description: "Never idle, always curious. Explore selected work in product design, AI, and civic tech.",
+    images: ["/og-image.png"],
   },
 }
 

@@ -47,6 +47,7 @@ export const metadata: Metadata = {
     title: "Matyas Toth — Designer, Engineer, Builder",
     description:
       "Portfolio of Matyas Toth — building digital products, AI tools, and civic tech.",
+    images: [{ url: "/og-image.png" }],
   },
   twitter: {
     card: "summary_large_image",
@@ -54,6 +55,7 @@ export const metadata: Metadata = {
     title: "Matyas Toth — Designer, Engineer, Builder",
     description:
       "Portfolio of Matyas Toth — building digital products, AI tools, and civic tech.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
